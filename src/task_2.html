@@ -15,10 +15,32 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png" />
   </head>
-  <body>
-    <ul>
+  <body class="body-style">
+    <ul class="list-container">
       <li><a class="link-position" href="./index.html">вернуться назад</a></li>
     </ul>
+    <div class="container">
+      <input type="date" id="date-selector" class="input" />
+      <button type="button" data-start class="start-btn">Start countdown</button>
+
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>--</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>--</span><span class="label"> Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>--</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>--</span>
+          <span class="label">Seconds</span>
+        </div>
+      </div>
+    </div>
     <script src="./js/task_2.js"></script>
   </body>
 </html>
