@@ -1,7 +1,13 @@
+@charset "UTF-8";
 /*
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+li {
+  list-style: none;
+}
 
-// Стили для файла с примером HTML-фрагмента
-@import './styles';
+body {
+  padding: 50px;
+}
+/*# sourceMappingURL=main.css.map */
