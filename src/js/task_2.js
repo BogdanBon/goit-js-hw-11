@@ -34,19 +34,19 @@ function isDateChoosed() {
     refs.seconds.textContent = targetTime.seconds;
     refs.startBtn.addEventListener('click', startCounter)
     function startCounter() {
-        setInterval(() => {
+        const intervalId = setInterval(() => {
             time -= 1000;
             targetTime = convertMs(time);
             refs.days.textContent = targetTime.days;
             refs.hours.textContent = targetTime.hours;
             refs.minutes.textContent = targetTime.minutes;
             refs.seconds.textContent = targetTime.seconds;
-            if (time === 0) {
-                return
+            if (time < 1000) {
+                clearInterval(intervalId);
             }
         }, 1000);
         refs.startBtn.removeEventListener('click', startCounter)
-        refs.startBtn.style.cursor = 'not-allowed';
+        refs.startBtn.disabled = true;
     }
     refs.choosedDate.style.display = 'none';
 }
